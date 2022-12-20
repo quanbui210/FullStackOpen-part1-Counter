@@ -1,14 +1,27 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Button from "./Button";
 import Statistic from "./Statistic";
-
+import axios from "axios";
 
 
 
 const App = () => {
+
+  // useEffect(() => {
+  //   axios
+  //     .get('https://restcountries.eu/rest/v2/all')
+  //     .then(response => {
+  //       console.log('promise fulfilled')
+  //       console.log([response.data])
+  //     }
+  //     )
+  // }, [])
+
+  
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
+  
   //const [all, setAll] = useState(0);
   const all = good + bad + neutral
   
